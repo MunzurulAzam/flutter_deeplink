@@ -40,10 +40,10 @@ class _HomeScreenState extends State<HomeScreen> {
 Future<void> initDeepLinks() async {
   _appLinks = AppLinks();
 
-  // Get initial link - use try/catch for better error handling
+  // Get initial link 
   try {
     final appLink = await _appLinks.getInitialAppLink();
-    log('Initial deep link: $appLink');  // Debug print
+    log('Initial deep link: $appLink');  
     if (appLink != null) {
       _handleDeepLink(appLink);
     }
@@ -51,10 +51,10 @@ Future<void> initDeepLinks() async {
     log('Error getting initial link: $e');
   }
 
-  // Listen for links - handle errors properly
+  // Listen for links 
   _linkSubscription = _appLinks.uriLinkStream.listen(
     (uri) {
-      log('New deep link received: $uri');  // Debug log
+      log('New deep link received: $uri');  
       _handleDeepLink(uri);
     },
     onError: (err) {
