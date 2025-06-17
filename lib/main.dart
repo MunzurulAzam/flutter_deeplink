@@ -95,7 +95,7 @@ Future<void> initDeepLinks() async {
             const Text('Test deep links using:'),
             const SizedBox(height: 10),
             Text(
-              'https://yourdomain.com/?param1=value1',
+              'Welcome to the Deep Link Demo!',
               style: Theme.of(context).textTheme.bodySmall,
             ),
             const SizedBox(height: 30),
